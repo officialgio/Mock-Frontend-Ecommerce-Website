@@ -155,7 +155,7 @@ nav img {
   font-weight: 500;
 }
 
-.showcase-arrow {
+.showcase-arrow  a{
   position: absolute;
   right: 15%;
   bottom: 10%;
