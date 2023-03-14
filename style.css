@@ -6,7 +6,7 @@
     --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
     --fs-800: 6.25rem;
     --fs-700: clamp(1.94rem, 1.25rem + 3.45vw, 3.71rem);
-    --fs-600: clamp(1.62rem, 1.23rem + 1.96vw, 2.62rem);
+    --fs-600: clamp(2.62rem, 1.23rem + 1.96vw, 2.62rem);
     --fs-500: clamp(1.35rem, 1.15rem + 0.99vw, 1.86rem);
     --fs-500: 1rem;
     --fs-400: clamp(1.13rem, 1.05rem + 0.37vw, 1.31rem);
@@ -153,19 +153,23 @@ nav img {
 }
 
 .showcase__button {
+  cursor: pointer;
   padding: 0.5rem 2rem;
   border: none;
   color: black;
   font-weight: 500;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 40%) 0px 0px 10px
 }
 
-.showcase-arrow  a{
+.showcase-arrow a  {
   position: absolute;
   right: 15%;
   bottom: 10%;
   transform: scale(0.6);
 
 }
+
 
 .circle {
   position: absolute;
@@ -197,17 +201,14 @@ nav img {
   background: white;
   min-height: 90vh;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   z-index: 5;
+  overflow: hidden;
 }
 
 .product__description {
   padding: 5% 15%;
   color: #4b4b4b;
-}
-
-.product__description h2 {
-
 }
 
 .product__description p {
@@ -233,6 +234,52 @@ nav img {
 
 .card {
   padding: 2rem;
+}
+
+@media screen and (max-width: 540px) {
+  .showcase {
+    flex-direction: column;
+    padding: 2.5rem;
+    justify-content: space-evenly;
+  }
+
+  .image__container {
+    min-height: 30vh;
+    justify-content: center;
+    order: 1;
+  }
+
+  .circle-1, .circle-2 {
+    display: none;
+  }
+
+  .circle-3 {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3);
+  }
+
+  .showcase__subtitle {
+    padding: 2rem 0rem;
+  }
+
+  .showcase__text {
+    padding-bottom: 0rem;
+  }
+
+  .next {
+    position: absolute;
+    right: 10%;
+    bottom: 50%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .next {
+    position: absolute;
+    right: 6%;
+    bottom: 50%;
+  }
 }
 
 /* ------------------------- Typography -------------------------------------------------- */

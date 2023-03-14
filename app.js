@@ -61,6 +61,7 @@ const enterAnimation = (current, done, gradient) => {
 barba.init({
     preventRunning: true, // prevent clicking multiple times bug fix
     transitions: [
+        // Main animations
         {
             once(data) { // refresh the page
                 const done = this.async();
@@ -81,8 +82,43 @@ barba.init({
                 enterAnimation(next, done, gradient);
             },
         },
+        // Product Page Animation
+        {
+            name: 'product-transition',
+            sync: true, // run it at the same time when leaving/entering
+            from: { namespace: ['handbag', 'product'] }, // from to and to from
+            to: { namespace: ['product', 'handbag'] },
+            enter(data) {
+                const done = this.async();
+                let next = data.next.container;
+                productEnterAnimation(next, done)
+            },
+            leave(data) {
+                const done = this.async();
+                let current = data.current.container;
+                productLeaveAnimation(current, done);
+            }
+
+
+        },
     ],
 });
+
+/**
+ * Enter product page lift the page to 0%
+ * Have the cards fade in sequentially 
+ * @param {next} next 
+ * @param {next} done 
+ */
+function productEnterAnimation(next, done) {
+    tlEnter.fromTo(next, { y: '100%' }, { y: '0%' });
+    tlEnter.fromTo('.card', { opacity: 0, y: 50 }, { opacity: 1, y: 0, stagger: 0.1, onComplete: done });
+}
+
+// Opposite of enter
+function productLeaveAnimation(current, done) {
+    tlLeave.fromTo(current, { y: '0%', opacity: 1 }, { y: '100%', opacity: 0, onComplete: done });
+}
 
 // Change Color Gradient
 function getGradient(name) {
