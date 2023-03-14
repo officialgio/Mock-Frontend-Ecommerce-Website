@@ -98,8 +98,6 @@ barba.init({
                 let current = data.current.container;
                 productLeaveAnimation(current, done);
             }
-
-
         },
     ],
 });
