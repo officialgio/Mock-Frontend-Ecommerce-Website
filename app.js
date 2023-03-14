@@ -79,7 +79,6 @@ barba.init({
                 let next = data.next.container;
                 let gradient = getGradient(data.next.namespace);
                 enterAnimation(next, done, gradient);
-                
             },
         },
     ],

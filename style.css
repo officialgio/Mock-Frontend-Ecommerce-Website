@@ -7,7 +7,7 @@
     --fs-800: 6.25rem;
     --fs-700: clamp(1.94rem, 1.25rem + 3.45vw, 3.71rem);
     --fs-600: clamp(1.62rem, 1.23rem + 1.96vw, 2.62rem);
-    --fs-550: 1.4rem;
+    --fs-500: clamp(1.35rem, 1.15rem + 0.99vw, 1.86rem);
     --fs-500: 1rem;
     --fs-400: clamp(1.13rem, 1.05rem + 0.37vw, 1.31rem);
     --fs-300: clamp(1rem, 0.94rem - 0.02vw, 1.125rem);
@@ -96,6 +96,10 @@ body {
   flex: 1;
 }
 
+.grid {
+  display: grid;
+}
+
 
 /* ------------------------- Main Page -------------------------------------------------- */
 .showcase {
@@ -182,6 +186,53 @@ nav img {
   left: 20%;
   top: 15%;
   transform: scale(1.5);
+}
+
+/* ------------------------- Product Page -------------------------------------------------- */
+.product__nav {
+  min-height: 10vh;
+}
+
+.product__section {
+  background: white;
+  min-height: 90vh;
+  position: absolute;
+  width: 100vw;
+  z-index: 5;
+}
+
+.product__description {
+  padding: 5% 15%;
+  color: #4b4b4b;
+}
+
+.product__description h2 {
+
+}
+
+.product__description p {
+  padding: 1rem 0rem
+}
+
+.product__gallery {
+  padding: 0% 15%;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.product__gallery ,
+.product-img {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.price {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  padding: 2rem;
 }
 
 /* ------------------------- Typography -------------------------------------------------- */

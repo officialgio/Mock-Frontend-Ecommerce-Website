@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <nav class="flex">
+        <picture>
+            <img src="./images/burger.svg" alt="">
+        </picture>
+        <a class="logo fs-550" href="./index.html">EXPLORE.</a>
+        <picture>
+            <img src="./images/shopping-cart.svg" class="shopping-bag" alt="">
+        </picture>
+    </nav>
+
+    <!-- Showcase Products -->
+    <section class="product__section" data-barba="container" data-barba-namespace="product">
+        <div class="product__description">
+            <h2>Shop your signatures.</h2>
+            <p>Your shortcut to sophistication. Our signatures never go out of style.</p>
+        </div>
+        <!-- Product Gallery -->
+        <div class="product__gallery grid">
+            <!-- 1 -->
+            <div class="card">
+                <picture><img class="product-img" src="./images/blackcard.png" alt=""></picture>
+                <h3>Leisara</h3>
+                <p class="fs-500">Black leather</p>
+                <div class="price flex">
+                    <h4>$300</h4>
+                    <picture>
+                        <img class="product-cart" src="./images/product-cart.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="card">
+                <picture><img class="product-img" src="./images/yellowcard.png" alt=""></picture>
+                <h3>Leisara</h3>
+                <p class="fs-500">Black leather</p>
+                <div class="price flex">
+                    <h4>$300</h4>
+                    <picture>
+                        <img class="product-cart" src="./images/product-cart.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="card">
+                <picture><img class="product-img" src="./images/tancard.png" alt=""></picture>
+                <h3>Leisara</h3>
+                <p class="fs-500">Black leather</p>
+                <div class="price flex">
+                    <h4>$300</h4>
+                    <picture>
+                        <img class="product-cart" src="./images/product-cart.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="card">
+                <picture><img class="product-img" src="./images/bluecard.png" alt=""></picture>
+                <h3>Leisara</h3>
+                <p class="fs-500">Black leather</p>
+                <div class="price flex">
+                    <h4>$300</h4>
+                    <picture>
+                        <img class="product-cart" src="./images/product-cart.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="card">
+                <picture><img class="product-img" src="./images/blackcard.png" alt=""></picture>
+                <h3>Leisara</h3>
+                <p class="fs-500">Black leather</p>
+                <div class="price flex">
+                    <h4>$300</h4>
+                    <picture>
+                        <img class="product-cart" src="./images/product-cart.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="card">
+                <picture><img class="product-img" src="./images/tancard.png" alt=""></picture>
+                <h3>Leisara</h3>
+                <p class="fs-500">Black leather</p>
+                <div class="price flex">
+                    <h4>$300</h4>
+                    <picture>
+                        <img class="product-cart" src="./images/product-cart.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
